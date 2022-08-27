@@ -1,13 +1,13 @@
 # Differential phase-shift keying for in-bore wireless transmission of MRI data
 
-![image](https://user-images.githubusercontent.com/58052954/187007738-36929357-7706-47ca-9cfb-6e0329acf868.png)
+N![1](https://user-images.githubusercontent.com/58052954/187008078-d949163c-7649-4bff-8e2d-28350a062a1a.jpg)
 
 Image above: 12-bit word 111111000000 with start and stop bits 1,0 is serialized, DPSK'd and sent out in LVDS format (original and inverted copy) out of the two cables attached to little brown square on the top left corner. It is recovered by the demodulator (pictured below) and deserializer (pictured above; small purple square on top edge) with its start and stop bits stripped away. The result (1111100000) is displayed in hexadecimal on the DE-10 Lite FPGA.
 
-Image below: Serialized bits wirelessly transmitted and given to demodulator hardware. No hardware is mine except that programmed into the FPGA.
+Image below: Serialized bits wirelessly transmitted and given to demodulator hardware. 
+o hardware is mine except that programmed into the FPGA.
 
-![image](https://user-images.githubusercontent.com/58052954/187007765-e7979e73-0d14-496f-8b19-71d78f10a9af.png)
-
+![2](https://user-images.githubusercontent.com/58052954/187008111-854a0496-b421-467a-91f5-9f710380d579.jpg)
 
 Pin assignments, board specifications, and other project config details sit in the .qsf file.
 The .qsf file assumes the demodulator and deserializer are both external hardware, and simply sends out the serialized, modulated word bit by bit at 10 MHz.
